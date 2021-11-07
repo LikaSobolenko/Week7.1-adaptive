@@ -1,0 +1,132 @@
+.container {
+    display: grid;
+    height: 100vh;
+    width: 100vw;
+    grid-template-columns: 1fr 20%;
+    grid-template-rows: 15% 1fr 15%;
+    gap: 5px;
+    font-size: 1em;
+}
+
+.hd {
+    grid-area: 1/1/2/3;
+    text-align: center;
+}
+
+.main {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+    grid-area: 2/1/3/2;
+    text-align: center;
+}
+
+.con-0 {
+    grid-area: 1/1/2/3;
+    text-align: center;
+}
+
+.con-3 {
+    grid-area: 3/1/4/3;
+    text-align: center;
+}
+
+.sb {
+    grid-area: 2/2/3/3;
+    text-align: center;
+}
+
+.footer {
+    grid-area: 3/1/4/3;
+    display: grid;
+    height: 10vh;
+    width: 100vw;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: 1fr;
+    justify-content: space-evenly;
+    gap: 5px;
+    text-align: center;
+}
+
+@media screen and (min-width: 1024px) {
+    .container {
+        display: grid;
+        height: 100vh;
+        width: 100vw;
+        grid-template-columns: 1fr 20%;
+        grid-template-rows: 15% 1fr 15%;
+        gap: 5px;
+        font-size: 1em;
+    }
+}
+
+@media screen and (min-width: 600px) and (max-width: 1023px) {
+    .container {
+        display: grid;
+        height: 87vh;
+        width: 100vw;
+        grid-template-columns: 90%;
+        grid-template-rows: 1fr 1fr 1fr;
+        gap: 5px;
+        font-size: 1em;
+    }
+
+    .sb {
+        text-align: center;
+        grid-area: 3/1/4/2;
+    }
+
+
+    .footer {
+        display: none;
+    }
+
+}
+
+@media screen and (max-width: 599px) {
+    .container {
+        display: grid;
+        height: 100vh;
+        width: 100vw;
+        grid-template-columns: 1fr;
+        grid-template-rows: 15% 1fr;
+        gap: 5px;
+        font-size: 1em;
+    }
+
+    .main {
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr 1fr 1fr 1fr;
+        text-align: center;
+    }
+
+    .con-0 {
+        grid-area: 1/1/2/2;
+        text-align: center;
+    }
+
+    .con-1 {
+        grid-area: 2/1/3/2;
+        text-align: center;
+    }
+
+    .con-2 {
+        grid-area: 3/1/4/2;
+        text-align: center;
+    }
+
+    .con-3 {
+        grid-area: 4/1/5/2;
+        text-align: center;
+    }
+
+    .footer {
+        display: none;
+    }
+
+    .sb {
+        display: none;
+    }
+
+}
